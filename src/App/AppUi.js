@@ -8,6 +8,10 @@ import TodoList from "../TodoList/TodoList"
 import TodoItem from "../TodoItem/TodoItem";
 import "./CreateTodoButton.css";
 import { Modal } from '../modal'
+import { TodoForm } from "../TodoForm";
+import {TodoLoading} from '../TodoLoading/index'
+import {TodoError} from '../TodoError/index'
+import {EmptyTodo} from '../EmptyTodo/index'
 
 function AppUi() {
 
@@ -18,16 +22,9 @@ function AppUi() {
     completeTodos,
     eliminateOne,
     openModal,
-    setOpenModal
+    estado
   } = React.useContext(TodoContext);
 
-  const estado = (val)=>{
-    if (openModal) {
-      setOpenModal(val)
-    }else if(!!openModal){
-      setOpenModal(val)
-    }
-  }
 
   return (
 
@@ -36,9 +33,9 @@ function AppUi() {
       <TodoSearch />
       <TodoList>
         {/* estados de carga */}
-        {error && <p> Desesperate, hubo un error...</p>}
-        {loading && <p> Estamos cargando, no desesperes...</p>}
-        {(!loading && !searchTodos.length) && <p>Crea tu primer TODO</p>}
+        {error && <TodoError error={error}/>}
+        {loading && <TodoLoading/>}
+        {(!loading && !searchTodos.length) && <EmptyTodo/>}
 
         {
           searchTodos.map(todo => (
@@ -54,11 +51,11 @@ function AppUi() {
       </TodoList>
       {openModal && (
         <Modal>
-          <p>{searchTodos[0]?.text}</p>
+          <TodoForm/>
         </Modal>
 
       )}
-      <button onClick={()=>setOpenModal(true)}
+      <button onClick={()=>estado()}
         className="CreateTodoButton">
         +
       </button>

@@ -1,0 +1,43 @@
+.container {
+  
+  background: white;
+  border: 1px solid #e5e6e9;
+  border-radius: 5px;
+  width: 80%;
+  padding: 1rem;
+  margin: 5px auto;
+ 
+}
+
+.background {
+  display: flex;
+  min-height: 50px;
+  width: 100%;
+  align-items: center;
+  
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: preloadAnimation;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+ 
+}
+
+.background p{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+
+}
+
+@keyframes preloadAnimation{
+  0%{
+      background-position: -769px 0
+  }
+  100%{
+      background-position: 769px 0
+  }
+}
