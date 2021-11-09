@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/vcastillo1993/Curso-Intro-React.git/static/css/main.e9ecea43.chunk.css",
+    "main.js": "/vcastillo1993/Curso-Intro-React.git/static/js/main.6f225dbc.chunk.js",
+    "main.js.map": "/vcastillo1993/Curso-Intro-React.git/static/js/main.6f225dbc.chunk.js.map",
+    "runtime-main.js": "/vcastillo1993/Curso-Intro-React.git/static/js/runtime-main.4c480c8d.js",
+    "runtime-main.js.map": "/vcastillo1993/Curso-Intro-React.git/static/js/runtime-main.4c480c8d.js.map",
+    "static/js/2.c54f25a8.chunk.js": "/vcastillo1993/Curso-Intro-React.git/static/js/2.c54f25a8.chunk.js",
+    "static/js/2.c54f25a8.chunk.js.map": "/vcastillo1993/Curso-Intro-React.git/static/js/2.c54f25a8.chunk.js.map",
+    "index.html": "/vcastillo1993/Curso-Intro-React.git/index.html",
+    "static/css/main.e9ecea43.chunk.css.map": "/vcastillo1993/Curso-Intro-React.git/static/css/main.e9ecea43.chunk.css.map",
+    "static/js/2.c54f25a8.chunk.js.LICENSE.txt": "/vcastillo1993/Curso-Intro-React.git/static/js/2.c54f25a8.chunk.js.LICENSE.txt",
+    "static/media/Checkbox.66cf1005.svg": "/vcastillo1993/Curso-Intro-React.git/static/media/Checkbox.66cf1005.svg",
+    "static/media/Eliminar.d3d2eaa3.svg": "/vcastillo1993/Curso-Intro-React.git/static/media/Eliminar.d3d2eaa3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c480c8d.js",
+    "static/js/2.c54f25a8.chunk.js",
+    "static/css/main.e9ecea43.chunk.css",
+    "static/js/main.6f225dbc.chunk.js"
+  ]
+}
