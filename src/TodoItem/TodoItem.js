@@ -24,16 +24,3 @@ const TodoItem = (props) => {
 
 export default TodoItem
 
-/*
- <span className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}
-      onClick={props.completeTodos}>
-        √
-      </span >
-      <span className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
-        {props.text}
-      </span>
-      <span className="Icon Icon-delete"
-      onClick={props.eliminateOne}>
-        X
-      </span>
-*/

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 /* creando mi propio UseHook */
 function useLocalStorage(itemName, initialValue) {
   /* ESTADOS DE CARGA */
+  const [sincronizedItem, setSincronizedItem] = useState(true);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true)
   const [item, setItem] = useState(initialValue);
@@ -22,14 +23,15 @@ function useLocalStorage(itemName, initialValue) {
 
       setItem(parsedItem);
       setLoading(false);
+      setSincronizedItem(true)
       /*==================== LOCALSTORAGE ========================== */
     }catch(error){
       setError(error)
       console.log(error)
       alert('ha sucedio un error')
     }
-    }, 2000);
-  })
+    }, 1000);
+  },[sincronizedItem])
 
   /*================= persisitencias en localStorage ==================*/
 
@@ -41,6 +43,11 @@ function useLocalStorage(itemName, initialValue) {
    } catch (error) {
      setError(error);
    }
+  };
+
+  const sincronizeItem = ()=>{
+    setLoading(true);
+    setSincronizedItem(false);
   }
 
   /*================= persisitencias en localStorage ==================*/
@@ -49,7 +56,8 @@ function useLocalStorage(itemName, initialValue) {
       item,
       saveTodos,
       loading,
-      error
+      error,
+      sincronizeItem
   }
 
 }

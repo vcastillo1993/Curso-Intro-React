@@ -6,7 +6,7 @@ function TodoError() {
   return(
     <div className="container">
       <div className="background">
-        <p>EDesesperate, hubo un error</p>
+        <p>Desesperate, hubo un error</p>
       </div>
     </div>
   )

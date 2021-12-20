@@ -1,14 +1,12 @@
 import React, { Fragment } from "react";
-import { TodoContext } from '../TodoContext';
 import './TodoCounter.css';
 
-const TodoCounter = () => {
-
-  const {totalTodos, completedTodos} = React.useContext(TodoContext);
+const TodoCounter = ({totalTodos, completedTodos, loading}) => {
 
   return (
     <Fragment>
-      <h2 className ="TitleTodoCounter" >
+      <h2 className ={`TitleTodoCounter ${!!loading && "TodoCounter--loading"}`}
+       >
         Has completado {completedTodos} de {totalTodos} Tarea</h2>
     </Fragment>
   )

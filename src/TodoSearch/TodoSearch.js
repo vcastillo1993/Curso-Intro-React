@@ -1,11 +1,8 @@
 import React from 'react'
 import { Fragment } from 'react/cjs/react.production.min'
-import {TodoContext} from '../TodoContext'
 import './TodoSearch.css'
 
-const TodoSearch = () => {
-
-  const {valdefault, setValDefault} = React.useContext(TodoContext);
+const TodoSearch = ({valdefault, setValDefault, loading}) => {
 
 const onChangeValue = (event) => {
   console.log(event.target.value);
@@ -19,6 +16,7 @@ const onChangeValue = (event) => {
       placeholder ="TAREA"
       value ={valdefault}
       onChange={onChangeValue}
+      disabled={loading}
       />
     </Fragment>
   )
